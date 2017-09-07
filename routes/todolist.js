@@ -6,7 +6,7 @@ models.Todos.findOne().then(function(todo){
 })
 
 router.get("/", function (req, res) {
-   models.Todos.findAll().then(function(todos){
+   models.Todos.findAll({ limit: 30, order: [['updatedAt', 'DESC']] }).then(function(todos){
      res.render('index', {
        todos: todos,
       })
@@ -18,9 +18,10 @@ router.post("/", function (req, res) {
     Task: req.body.todo,
   })
   todo.save().then(function(newTodo){
-    console.log(newTodo.id);
+    console.log("hello world");
+    res.redirect('/')
   })
-  res.redirect('/')
+  console.log("test");
 })
 
 router.post("/completed", function (req, res) {
@@ -47,9 +48,7 @@ router.post("/edit", function (req, res) {
 
 router.post("/deleteAll", function (req, res) {
   models.Todos.destroy({
-    where: {
-      // id: req.body.button
-    },
+    where: {},
     truncated: true
   }).then(function(){
     res.redirect('/')

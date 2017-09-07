@@ -106,3 +106,25 @@ body {
   color: white;
   margin-left: 55px;
 }
+
+.deleteAllDiv{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#editField{
+  width: 200px;
+  border-radius: 5px;
+}
+
+#deleteAllButton {
+  height: 35px;
+  width: 150px;
+  border-radius: 5px;
+}
+
+#deleteAllButton:hover {
+  color: white;
+  background: red;
+}

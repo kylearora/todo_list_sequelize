@@ -23,7 +23,7 @@
           </form>
           <form class="edit" action="/edit" method="post">
             <div class="editSection">
-              <input type="text" name="edit" value="" placeholder="Update your Task">
+              <input id="editField" type="text" name="edit" value="" placeholder="Update your Task">
               <button type="submit" name="editButton" value="{{id}}">Update your Task</button>
             </div>
           </form>
@@ -31,7 +31,7 @@
       </div>
       <div class="deleteAllDiv">
         <form class="" action="/deleteAll" method="post">
-          <button type="submit" name="deleteAllButton" value="">Delete All Tasks</button>
+          <button id="deleteAllButton" type="submit" name="deleteAllButton" value="">Delete All Tasks</button>
         </form>
       </div>
     </div>
