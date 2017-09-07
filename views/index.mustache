@@ -1,0 +1,60 @@
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Todo List</title>
+  </head>
+  <body>
+    <h1>Todos List</h1>
+
+    <form class="" action="/" method="post">
+      <div class="">
+        <label for="">Task</label>
+        <input type="text" name="todo" value="What do you have to do?">
+      </div>
+      <div class="">
+        <input type="submit" name="submitButton" value="Submit">
+      </div>
+    </form>
+  </body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/css/styles.css">
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="main">
+
+      <form action="/" method="post">
+        <div class="inputWrapper">
+          <input class="inputField" type="text" name="todo" value="" placeholder="What do you have to do?">
+          <input class="inputButton" type="submit" value="Add Task">
+        </div>
+      </form>
+      <div class="taskContent">
+        <h3 id="todoHeader">Incomplete Tasks</h3>
+        <form class="" action="/completed" method="post">
+          <div class="todoSection">
+            {{#todos}}
+            <button class= "completeButton" type="submit" name="button" value="{{.}}">I'm Done!</button>
+            <h3 class="todoItem">{{Task}}</h3>
+            {{/todos}}
+          </div>
+        </form>
+
+        <!-- <div class="completedTasks">
+          <h3 id="completeHeader">Completed Tasks</h3>
+          {{#completed}}
+          <h3 class ="completedItems">{{.}}</h3>
+          {{/completed}}
+        </div> -->
+
+      </div>
+    </div>
+  </body>
+</html>
