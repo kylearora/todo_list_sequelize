@@ -45,5 +45,17 @@ router.post("/edit", function (req, res) {
   })
 })
 
+router.post("/deleteAll", function (req, res) {
+  models.Todos.destroy({
+    where: {
+      // id: req.body.button
+    },
+    truncated: true
+  }).then(function(){
+    res.redirect('/')
+  })
+})
+
+
 
 module.exports = router

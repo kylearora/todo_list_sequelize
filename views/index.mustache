@@ -24,12 +24,15 @@
           <form class="edit" action="/edit" method="post">
             <div class="editSection">
               <input type="text" name="edit" value="" placeholder="Update your Task">
-            </div>
-            <div class="editButton">
               <button type="submit" name="editButton" value="{{id}}">Update your Task</button>
             </div>
           </form>
         {{/todos}}
+      </div>
+      <div class="deleteAllDiv">
+        <form class="" action="/deleteAll" method="post">
+          <button type="submit" name="deleteAllButton" value="">Delete All Tasks</button>
+        </form>
       </div>
     </div>
   </body>

@@ -7,8 +7,6 @@ app.set("view engine", "mustache")
 app.use(express.static("public"))
 app.use(bodyParser.urlencoded({ extended: false }))
 
-
-
 const todoRoute = require("./routes/todolist")
 app.use(todoRoute)
 
