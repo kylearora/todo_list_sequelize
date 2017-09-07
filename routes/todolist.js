@@ -14,7 +14,6 @@ router.get("/", function (req, res) {
 })
 
 router.post("/", function (req, res) {
-  // todos.push(req.body.todo);
   const todo = models.Todos.build({
     Task: req.body.todo,
   })
@@ -27,13 +26,11 @@ router.post("/", function (req, res) {
 router.post("/completed", function (req, res) {
   models.Todos.destroy({
     where: {
-      Task: req.body.button
+      id: req.body.button
     }
   }).then(function(){
     res.redirect('/')
   })
 })
-
-
 
 module.exports = router
