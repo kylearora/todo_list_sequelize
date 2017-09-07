@@ -33,4 +33,17 @@ router.post("/completed", function (req, res) {
   })
 })
 
+router.post("/edit", function (req, res) {
+  models.Todos.update({
+    Task: req.body.edit,
+  }, {
+    where: {
+      id: req.body.editButton
+    }
+  }).then(function(){
+    res.redirect('/')
+  })
+})
+
+
 module.exports = router
